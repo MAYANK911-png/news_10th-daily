@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+  <title>News CMS</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+<!-- 🕒 CLOCK -->
+<div id="clock"></div>
+
+
+
+<!-- 🔥 SIDEBAR -->
+<nav>
+
+  <button onclick="show('news')">
+    NEWS
+  </button>
+
+  <button onclick="show('poll')">
+    POLL
+  </button>
+
+  <button onclick="show('about')">
+    ABOUT
+  </button>
+
+  <button onclick="show('admin')">
+    ADMIN
+  </button>
+
+</nav>
+
+
+
+<!-- 📰 NEWS -->
+<section id="news" class="active">
+
+  <h1>Latest News</h1>
+
+  <div id="newsBox"></div>
+
+</section>
+
+
+
+<!-- 🗳 POLL -->
+<section id="poll">
+
+  <h1>Daily Poll</h1>
+
+  <div id="pollBox"></div>
+
+</section>
+
+
+
+<!-- ℹ ABOUT -->
+<section id="about">
+
+  <h1>About Us</h1>
+
+  <div class="card">
+
+    <p>
+      Welcome to our digital news platform.
+      We focus on clean reporting,
+      public discussions, and daily updates.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- 🔐 ADMIN -->
+<section id="admin">
+
+
+  <!-- LOGIN -->
+  <div id="loginBox">
+
+    <h2>Admin Login</h2>
+
+    <input
+      id="email"
+      placeholder="Email">
+
+    <input
+      id="password"
+      type="password"
+      placeholder="Password">
+
+    <button onclick="login()">
+      Login
+    </button>
+
+  </div>
+
+
+
+  <!-- PANEL -->
+  <div
+    id="adminPanel"
+    style="display:none;">
+
+    <h2>Add News</h2>
+
+    <input
+      id="title"
+      placeholder="News Title">
+
+    <textarea
+      id="content"
+      placeholder="News Content"></textarea>
+
+    <button onclick="addNews()">
+      Add News
+    </button>
+
+
+    <hr>
+
+
+    <h2>Create Poll</h2>
+
+    <input
+      id="pollQuestion"
+      placeholder="Poll Question">
+
+    <input
+      id="option1"
+      placeholder="Option 1">
+
+    <input
+      id="option2"
+      placeholder="Option 2">
+
+    <input
+      id="option3"
+      placeholder="Option 3">
+
+    <input
+      id="option4"
+      placeholder="Option 4">
+
+    <button onclick="addPoll()">
+      Add Poll
+    </button>
+
+
+    <button onclick="logout()">
+      Logout
+    </button>
+
+  </div>
+
+</section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script defer src="app.js"></script>
+
+</body>
+</html>

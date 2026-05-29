@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+  <title>Class News Daily</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+  <!-- 🔷 TOP BAR -->
+
+  <div class="topBar">
+
+    <p>
+      Student Run Digital Newspaper
+    </p>
+
+    <span id="clock"></span>
+
+  </div>
+
+
+
+  <!-- 📰 HEADER -->
+
+  <header>
+
+    <h1 class="mainTitle">
+      Class News Daily
+    </h1>
+
+    <p class="tagline">
+      ALL THE NEWS FIT FOR THE HALLWAYS
+    </p>
+
+  </header>
+
+
+
+  <!-- 🧭 NAVBAR -->
+
+  <nav>
+
+    <button onclick="showSection('news')">
+      Home
+    </button>
+
+    <button onclick="showSection('about')">
+      About
+    </button>
+
+    <button onclick="showSection('admin')">
+      Admin
+    </button>
+
+  </nav>
+
+
+
+  <!-- 📰 NEWS SECTION -->
+
+  <section
+    id="news"
+    class="active">
+
+    <!-- BREAKING NEWS -->
+
+    <div id="featuredNews"></div>
+
+
+    <!-- STORIES -->
+
+    <div class="sectionHeading">
+
+      <h2>
+        More Stories
+      </h2>
+
+    </div>
+
+
+    <div
+      id="newsBox"
+      class="newsGrid"></div>
+
+  </section>
+
+
+
+  <!-- ℹ️ ABOUT -->
+
+  <section id="about">
+
+    <div class="articleContainer">
+
+      <h1>
+        About Us
+      </h1>
+
+      <p>
+        Class News Daily is a student-led
+        digital newsroom focused on school
+        updates, student affairs, sports,
+        events and announcements.
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- 🔐 ADMIN -->
+
+  <section id="admin">
+
+
+    <!-- LOGIN -->
+
+    <div
+      id="loginBox"
+      class="adminCard">
+
+      <h2>
+        Admin Login
+      </h2>
+
+      <input
+        id="email"
+        type="email"
+        placeholder="Email">
+
+      <input
+        id="password"
+        type="password"
+        placeholder="Password">
+
+      <button onclick="login()">
+        Login
+      </button>
+
+    </div>
+
+
+
+    <!-- ADMIN PANEL -->
+
+    <div
+      id="adminPanel"
+      class="adminCard"
+      style="display:none;">
+
+      <h2>
+        Publish News
+      </h2>
+
+
+
+      <!-- CATEGORY -->
+
+      <select id="category">
+
+        <option value="General">
+          General
+        </option>
+
+        <option value="Sports">
+          Sports
+        </option>
+
+        <option value="Student">
+          Student Affairs
+        </option>
+
+        <option value="Teachers">
+          Teachers
+        </option>
+
+        <option value="Recesses">
+          Recesses
+        </option>
+
+        <option value="Breaking">
+          Breaking
+        </option>
+
+      </select>
+
+
+
+      <!-- TITLE -->
+
+      <input
+        id="title"
+        placeholder="Headline">
+
+
+
+      <!-- PREVIEW -->
+
+      <textarea
+        id="preview"
+        placeholder="Short Preview"></textarea>
+
+
+
+      <!-- CONTENT -->
+
+      <textarea
+        id="content"
+        placeholder="Full Article"></textarea>
+        <input
+        type="file"
+        id="newsImage"
+        accept="image/*">
+
+
+
+      <button onclick="addNews()">
+        Publish News
+      </button>
+
+      <button onclick="logout()">
+        Logout
+      </button>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- SUPABASE -->
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <script src="main.js"></script>
+
+</body>
+</html>

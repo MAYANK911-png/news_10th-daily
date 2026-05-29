@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700;800&display=swap');
+
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+
+
+body{
+
+  background:#f7f4ef;
+
+  color:#1e293b;
+
+  font-family:'Inter',sans-serif;
+
+  line-height:1.7;
+}
+
+
+
+/* 🔷 TOP BAR */
+
+.topBar{
+
+  background:#0f172a;
+
+  color:white;
+
+  padding:12px 40px;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  font-size:14px;
+
+  letter-spacing:0.5px;
+}
+
+
+
+/* 📰 HEADER */
+
+header{
+
+  text-align:center;
+
+  padding:50px 20px 30px;
+}
+
+
+
+.mainTitle{
+
+  font-family:'Playfair Display',serif;
+
+  font-size:64px;
+
+  font-weight:800;
+
+  color:#0f172a;
+}
+
+
+
+.tagline{
+
+  margin-top:10px;
+
+  letter-spacing:4px;
+
+  font-size:13px;
+
+  color:#64748b;
+}
+
+
+
+/* 🧭 NAVBAR */
+
+nav{
+
+  border-top:1px solid #d6d3d1;
+
+  border-bottom:1px solid #d6d3d1;
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:35px;
+
+  padding:16px;
+}
+
+
+
+nav button{
+
+  border:none;
+
+  background:none;
+
+  cursor:pointer;
+
+  font-size:15px;
+
+  color:#1e293b;
+
+  font-weight:600;
+
+  transition:0.3s;
+}
+
+
+
+nav button:hover{
+
+  color:#2563eb;
+}
+
+
+
+/* 📄 SECTIONS */
+
+section{
+
+  display:none;
+
+  padding:50px 8%;
+}
+
+
+
+.active{
+
+  display:block;
+}
+
+
+
+/* 🌟 FEATURED ARTICLE */
+
+.featuredCard{
+
+  background:white;
+
+  border-radius:18px;
+
+  overflow:hidden;
+
+  box-shadow:0 4px 20px rgba(0,0,0,0.06);
+
+  margin-bottom:50px;
+}
+
+
+
+.featuredImage{
+
+  height:320px;
+
+  background:#dbeafe;
+}
+
+
+
+.featuredContent{
+
+  padding:35px;
+}
+
+
+
+.featuredContent h1{
+
+  font-family:'Playfair Display',serif;
+
+  font-size:42px;
+
+  line-height:1.2;
+
+  margin:18px 0;
+}
+
+
+
+/* 📰 SECTION TITLE */
+
+.sectionHeading{
+
+  margin-bottom:30px;
+}
+
+
+
+.sectionHeading h2{
+
+  font-family:'Playfair Display',serif;
+
+  font-size:34px;
+}
+
+
+
+/* 🧩 NEWS GRID */
+
+.newsGrid{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(300px,1fr));
+
+  gap:28px;
+}
+
+
+
+/* 📰 NEWS CARD */
+
+.card{
+
+  background:white;
+
+  border-radius:18px;
+
+  padding:28px;
+
+  box-shadow:0 4px 18px rgba(0,0,0,0.05);
+
+  transition:0.3s;
+}
+
+
+
+.card:hover{
+
+  transform:translateY(-4px);
+}
+
+
+
+.card h2{
+
+  margin:15px 0;
+
+  line-height:1.3;
+}
+
+
+
+.card a{
+
+  text-decoration:none;
+
+  color:#0f172a;
+
+  font-family:'Playfair Display',serif;
+
+  font-size:28px;
+}
+
+
+
+.card a:hover{
+
+  color:#2563eb;
+}
+
+
+
+/* 🏷 CATEGORY */
+
+.category{
+
+  display:inline-block;
+
+  padding:6px 14px;
+
+  border-radius:999px;
+
+  font-size:12px;
+
+  font-weight:700;
+
+  letter-spacing:1px;
+
+  text-transform:uppercase;
+
+  margin-bottom:10px;
+}
+
+
+
+/* CATEGORY COLORS */
+
+.category.general{
+  background:#dbeafe;
+  color:#1d4ed8;
+}
+
+.category.sports{
+  background:#dcfce7;
+  color:#15803d;
+}
+
+.category.student{
+  background:#fef3c7;
+  color:#b45309;
+}
+
+.category.teachers{
+  background:#ede9fe;
+  color:#7c3aed;
+}
+
+.category.recesses{
+  background:#cffafe;
+  color:#0891b2;
+}
+
+
+
+/* 📝 PREVIEW */
+
+.preview{
+
+  color:#475569;
+
+  margin-top:10px;
+}
+
+
+
+/* 🔐 ADMIN */
+
+.adminCard{
+
+  max-width:700px;
+
+  margin:auto;
+
+  background:white;
+
+  padding:35px;
+
+  border-radius:18px;
+
+  box-shadow:0 4px 18px rgba(0,0,0,0.05);
+}
+
+
+
+.adminCard h2{
+
+  margin-bottom:20px;
+
+  font-family:'Playfair Display',serif;
+
+  font-size:36px;
+}
+
+
+
+/* INPUTS */
+
+input,
+textarea,
+select{
+
+  width:100%;
+
+  margin-bottom:18px;
+
+  padding:14px;
+
+  border:1px solid #d6d3d1;
+
+  border-radius:12px;
+
+  font-size:15px;
+
+  background:white;
+}
+
+
+
+textarea{
+
+  resize:none;
+
+  min-height:150px;
+}
+
+
+
+/* 🔘 BUTTONS */
+
+button{
+
+  cursor:pointer;
+}
+
+
+
+.adminCard button{
+
+  background:#0f172a;
+
+  color:white;
+
+  border:none;
+
+  padding:14px 20px;
+
+  border-radius:12px;
+
+  font-weight:600;
+
+  margin-right:10px;
+
+  transition:0.3s;
+}
+
+
+
+.adminCard button:hover{
+
+  background:#1e293b;
+}
+
+
+
+/* 🗑 DELETE */
+
+.deleteBtn{
+
+  margin-top:20px;
+
+  background:#dc2626 !important;
+}
+
+
+
+/* 📖 ARTICLE */
+
+.articleContainer{
+
+  max-width:850px;
+
+  margin:auto;
+
+  background:white;
+
+  padding:50px;
+
+  border-radius:18px;
+
+  box-shadow:0 4px 20px rgba(0,0,0,0.05);
+}
+
+
+
+.articleContainer h1{
+
+  font-family:'Playfair Display',serif;
+
+  font-size:52px;
+
+  line-height:1.2;
+
+  margin:20px 0;
+}
+
+
+
+/* 📱 MOBILE */
+
+@media(max-width:768px){
+
+  .mainTitle{
+
+    font-size:42px;
+  }
+
+  nav{
+
+    flex-wrap:wrap;
+
+    gap:18px;
+  }
+
+  .featuredContent h1{
+
+    font-size:30px;
+  }
+
+  .articleContainer{
+
+    padding:30px;
+  }
+
+  .articleContainer h1{
+
+    font-size:38px;
+  }
+
+}
+.timeStamp{
+
+  margin-top:18px;
+
+  color:#64748b;
+
+  font-size:14px;
+
+  font-weight:500;
+}
+.newsImage{
+
+  width:100%;
+
+  height:220px;
+
+  object-fit:cover;
+
+  border-radius:14px;
+
+  margin-bottom:18px;
+}
