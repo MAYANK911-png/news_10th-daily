@@ -234,7 +234,7 @@ if(imageFile){
   const {
     error: uploadError
   } = await db.storage
-      .from("news-images")
+      .from("news-image")
       .upload(
         fileName,
         imageFile
